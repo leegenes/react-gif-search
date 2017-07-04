@@ -14,8 +14,8 @@ class App extends React.Component {
 
   handleTermChange(term) {
     const url = `http://api.giphy.com/v1/gifs/search?q=${term.replace(/\s/g, '+')}&api_key=dc6zaTOxFJmzC`;
-    request.get(url, function(err, res) => {
-      this.setState({ gifs: res.body.data });
+    request.get(url, (err, res) => {
+      this.setState({ gifs: res.body.data })
     });
   }
 
