@@ -2,9 +2,9 @@ import React from 'react';
 
 const GifItem = (image) => {
   return (
-    <li>
+    <div className="gif-item">
       <img alt="Returned gif from API call" src={image.gif.images.downsized.url} />
-    </li>
+    </div>
   )
 };
 export default GifItem;
