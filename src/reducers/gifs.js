@@ -1,4 +1,4 @@
-export default funciton() {
+export default function() {
   return [
     {
       id: 1,
