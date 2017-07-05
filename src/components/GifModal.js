@@ -9,13 +9,16 @@ const GifModal = (props) => {
   return (
     <Modal
       isOpen={props.modalIsOpen}
-      onRequestClose={ () => props.onRequestClose() }>
+      onRequestClose={ () => props.onRequestClose() }
+      contentLabel="gif">
+
       <div className="gif-modal">
-        <img src={ props.selectedGif.images.original.url } />
+
+        <img alt="returned gif from giphy" src={ props.selectedGif.images.original.url } />
 
         <p>
           <strong>Source:</strong>
-          <a href={ props.selectedGif.source}>
+          <a href={ props.selectedGif.source }>
             {props.selectedGif.source}
           </a>
         </p>
@@ -28,7 +31,9 @@ const GifModal = (props) => {
         </p>
 
         <button onClick={ () => props.onRequestClose()}>close</button>
+
       </div>
+
     </Modal>
   );
 };
